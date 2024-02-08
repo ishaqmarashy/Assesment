@@ -5,11 +5,12 @@ class Vehicle:
 
     # Question 1: Return a string representation of the object
     # Your code here
-
+    def __str__(self) -> str:
+        return f'Vehicle_id: {self.vehicle_id}, Fare/km{self.fare_per_km}'
 
     # Question 2: Get the fare per km for the vehicle. How can we make this a property instead of a method?
     def get_fare_per_km(self):
-        pass    # Your code here
+        return self.fare_per_km
 
 
 class Trip:
@@ -22,11 +23,12 @@ class Trip:
 
     def calculate_fare(self):
         # Calculate the fare for the trip by using distance and fare.
-        pass  # Your code here
-
-    def change_end_location():
+        fare=self.distance*self.vehicle.fare_per_km
+        return fare
+    
+    def change_end_location(self,new_end_location):
         # Change the end location of the trip
-        pass  # Your code here
+        self.end_location=new_end_location
 
     # Implement operator overloading here for the following comparisons:
     # 1. Greater than (>)
@@ -34,19 +36,20 @@ class Trip:
     # 3. Equal to (==)
 
     def __gt__(self, other):
-        pass  # Your code here for greater than
+        return self.calculate_fare()> other.calculate_fare()
 
     def __lt__(self, other):
-        pass  # Your code here for less than
+        return self.calculate_fare()< other.calculate_fare()
 
     def __eq__(self, other):
-        pass  # Your code here for equal to
+        return self.calculate_fare()== other.calculate_fare()
 
 # <---------------Inherit from the Vehicle class---------------->
 
 # We want a new class called ElectricVehicle that inherits from the Vehicle class.
 # The ElectricVehicle class should have an additional attribute called battery_capacity.
 
-class ElectricVehicle():
-    pass    # Your code here
+class ElectricVehicle(Vehicle):
+    def __init__(self,battery_capacity):
+        self.battery_capacity=battery_capacity
 
