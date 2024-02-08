@@ -1,0 +1,53 @@
+Basic Python Concepts:
+
+Q1: Explain the difference between a list and a tuple in Python.
+
+
+
+Q2: Write a Python function to find the factorial of a given number.
+
+def factorial(n):
+    pass
+
+
+Q3. Given a dictionary, find the key associated with a given value (You only need to return the first key in case of duplicates.)
+
+def find_key(dictionary, value):
+    pass
+
+
+
+Q4: What is the purpose of __init__ method in Python classes?
+
+
+
+
+Q5: Write a simple Python function that handles a specific exception. (What doess the 'finally' block do)
+
+
+
+
+
+Q6. How do you create a custom user model in Django?
+
+
+
+
+Q7. How do you create a custom authentication backend in Django?
+
+
+
+
+Q8. What is the difference between normal django views and an APIView?
+
+
+
+
+Q9. Explain the purpose of a serializer. How do you validate passwords in a serializer. Explain the is_valid method.
+
+
+
+Q10. Given a Django model for a named BlogPost with fields like title, content, status(can be published or draft), 
+     and publication date, write a query to fetch the latest 5 published blog posts.
+
+
